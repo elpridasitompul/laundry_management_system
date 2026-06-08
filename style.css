@@ -1,0 +1,246 @@
+/* ============================================================
+   STYLE.CSS - SMART LAUNDRY SYSTEM (FULL VERSION)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #7c3aed;          /* Ungu Utama */
+    --primary-hover: #6d28d9;
+    --primary-light: #f3e8ff;    /* Ungu Muda untuk Hover Menu */
+    --bg-sidebar: #fdf4ff;       /* Pink/Ungu Sangat Muda */
+    --bg-body: #fafafa;
+    --text-main: #444;
+    --text-muted: #666;
+    --white: #ffffff;
+}
+
+/* 1. SETUP DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-body);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* 2. SIDEBAR NAVIGATION */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px 20px;
+    background: var(--bg-sidebar);
+    border-right: 1px solid #f3e8ff;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: #a855f7;
+    margin-bottom: 40px;
+    display: block;
+    text-decoration: none;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--primary);
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.menu a:hover, .menu a.active {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.active {
+    background: #e9d5ff !important;
+    font-weight: 600 !important;
+}
+
+/* 3. CONTENT AREA LAYOUT */
+.content {
+    margin-left: 240px;
+    padding: 40px 50px;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.header h1 {
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+    font-size: 28px;
+}
+
+/* 4. DASHBOARD & STATS (Angka-angka) */
+.stats-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.stats-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* 5. CARD & TABLE STYLING */
+.table-container {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.03);
+    border: 1px solid #f3e8ff;
+}
+
+.table {
+    width: 100%;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    border-bottom: 2px solid #f3e8ff;
+    color: #a855f7;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.table tbody td {
+    padding: 15px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #faf5ff;
+    text-align: center;
+}
+
+/* 6. BUTTONS & ACTIONS */
+.btn-tambah {
+    padding: 12px 24px;
+    background: var(--primary);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-tambah:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.2);
+}
+
+/* 7. STATUS PILLS (Dropdowns Status) */
+.btn-status {
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    border: none;
+    min-width: 100px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.st-proses { background: #fef3c7 !important; color: #92400e !important; }
+.st-selesai { background: #dcfce7 !important; color: #166534 !important; }
+.st-diambil { background: #e0f2fe !important; color: #075985 !important; }
+
+/* 8. WHATSAPP BUTTON */
+.wa-btn {
+    background-color: #25D366;
+    color: white !important;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 13px;
+    border: none;
+    padding: 8px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* 9. LOGIN PAGE STYLING */
+.login-body {
+    background: #f1f5f9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 400px;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+}
+
+.alert-danger {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 10. UTILITIES */
+.text-center { text-align: center !important; }
+.text-start { text-align: left !important; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.w-100 { width: 100%; }
+.text-danger { color: #ef4444 !important; }
+.text-primary { color: var(--primary) !important; }
